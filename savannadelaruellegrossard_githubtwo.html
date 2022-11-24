@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bonus Opdracht BMI Berekenen</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		let gewicht = prompt("Wat is uw gewicht?");
+
+			if (gewicht == null) 
+
+			{
+		    alert("U heeft geannuleerd!");
+			}
+
+			else if (gewicht.length == 0) 
+
+			{
+		    alert("U heeft niets ingegeven!");
+			}
+
+			else
+
+			{
+				let lengte = prompt("Wat is uw lengte?");
+
+					if (lengte == null) 
+
+					{
+				    alert("U heeft geannuleerd!");
+					}
+
+					else if (lengte.length == 0) 
+
+					{
+				    alert("U heeft niets ingegeven!");
+					}
+
+					else
+
+					{
+						let BMI = (gewicht / (lengte * lengte)).toFixed(1);
+
+							if(BMI < 18.5)
+
+							{
+								let tussen = "kleiner dan 18.5";
+						        let uitkomst = "ondergewicht";
+						    	document.write(`<p>Uw BMI is ${BMI}, dus ${tussen}, dit betekent dat u ${uitkomst} heeft.</p>`);
+
+						    }
+
+						    else if( BMI >= 18.5 && BMI <= 25 )
+
+						    {
+								let tussen = "tussen 18.5 en 25";
+						        let uitkomst = "gezond gewicht";
+						        document.write(`<p>Uw BMI is ${BMI}, dus ${tussen}, dit betekent dat u een ${uitkomst} heeft.</p>`);
+						    }
+
+						    else if( BMI >= 25 && BMI <= 30 )
+
+						    {
+								let tussen = "tussen 25 en 30";
+						        let uitkomst = "overgewicht";
+						        document.write(`<p>Uw BMI is ${BMI}, dus ${tussen}, dit betekent dat u ${uitkomst} heeft.</p>`);
+						    }
+
+						    else
+
+						    {
+						   		let tussen = "over 30";
+						        let uitkomst = "obesitas";
+						        document.write(`<p>Uw BMI is ${BMI}, dus ${tussen}, dit betekent dat u ${uitkomst} heeft.</p>`);
+						    }
+					}
+			}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bonus Opdracht Dag Van de Week</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		let datum = new Date();
+		let vandaag = datum.getDay();
+
+		let dagBenamingen = ['maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag', 'zondag'];
+
+			if (vandaag == 0)
+
+				{
+				document.write(`<p>Vandaag is het ${dagBenamingen[vandaag+6]}.</p>`);
+				document.write(`<p>Het is weekend, even bekomen.</p>`);
+				}
+
+			else
+				
+				{
+
+				document.write(`<p>Vandaag is het ${dagBenamingen[vandaag-1]}.</p>`);
+
+
+					if (vandaag == 6)
+
+					{
+					document.write(`<p>Het is weekend, even bekomen.</p>`)
+					}
+
+					else if (vandaag == 0||1||2||3||4)
+
+					{
+					document.write(`<p>Het is een werkdag, aan de slag dus.</p>`)
+					}
+					
+				}
+
+	</script>
+
+</body>
+</html>
